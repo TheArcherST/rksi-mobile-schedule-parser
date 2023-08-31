@@ -20,7 +20,7 @@ async def main():
     if not await parser.is_alive():
         return print('Not alive')
 
-    themes = await parser.parse_group_themes('ИБА-11')
+    themes = await parser.parse_group_themes('ИБА-21')
     current_date = None
 
     for i in themes:

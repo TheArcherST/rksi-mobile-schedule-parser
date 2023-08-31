@@ -131,7 +131,7 @@ class RKSIScheduleParser(BaseScheduleParser):
                 'Connection': 'keep-alive',
             }
 
-            group_name = urllib.parse.quote(group_name, encoding='windows-1251')
+            group_name = urllib.parse.quote(group_name, encoding='utf-8')
             data = f'group={group_name}&stt=%CF%EE%EA%E0%E7%E0%F2%FC%21'
 
             r = await session.post('https://rksi.ru/mobile_schedule', data=data, headers=headers)
